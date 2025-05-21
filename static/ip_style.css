@@ -1,0 +1,152 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f2f0, #e0e0e0);
+    color: #333;
+    display: flex;
+    justify-content: center; /* Center the upload container horizontally */
+    align-items: center; /* Center the upload container vertically */
+    min-height: 100vh;
+    margin: 0;
+}
+
+.upload-container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 1600px; /* Increased max width for two columns */
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    overflow: hidden; /* To contain rounded corners of inner elements */
+    margin: 40px auto; /* Add top and bottom margin and auto for horizontal centering */
+}
+
+.image-column {
+    flex: 0 0 70%; /* Takes up 70% of the width */
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-column .logo-container {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.image-column .logo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the image fits within the container without cropping */
+}
+
+.upload-form-column {
+    flex: 0 0 30%; /* Takes up 30% of the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; /* Make form elements take full width */
+}
+
+.form-title {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    text-align: left; /* Align title to the left in its column */
+}
+
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-primary {
+    background-color: #667eea;
+    border-color: #667eea;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    width: 100%; /* Make button take full width of its container */
+}
+
+.btn-primary:hover {
+    background-color: #5a67d8;
+    border-color: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.text-muted {
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+.alert-danger {
+    background-color: #fdecea;
+    color: #c53030;
+    border-color: #f56565;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .upload-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-column {
+        width: 80%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .upload-form-column {
+        width: 80%;
+    }
+
+    .form-title, .text-muted {
+        text-align: center;
+    }
+}
+
+.upload-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
