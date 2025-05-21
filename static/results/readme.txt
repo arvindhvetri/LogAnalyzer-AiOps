@@ -1,0 +1,1 @@
+This results directory will store the generated output files.

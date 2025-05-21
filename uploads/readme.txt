@@ -1,0 +1,1 @@
+This uploads directory will store the user's input file.
