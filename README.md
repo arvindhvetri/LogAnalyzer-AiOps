@@ -107,7 +107,7 @@ Here, it forecasts **log severity levels** for the next few minutes:
 ---
 
 ## 🚀 Output
-- Upon running app.py, all generated output files will be saved in the `static/results` directory.
+- Upon running app.py, all generated output files will be saved in the `static/results` directory and the uploaded file will be saved in `uploads` directory.
 
 [LogAnalyzer-AiOps.pdf](https://github.com/user-attachments/files/20358285/LogAnalyzer-AiOps.pdf)
 
